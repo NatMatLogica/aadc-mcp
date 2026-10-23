@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.matlogica/aadc-mcp",
+  "title": "MatLogica AADC and the AADC Tracer",
+  "description": "Trace your own QuantLib or Python pricer with MatLogica's AADC and question the record.",
+  "version": "0.1.2",
+  "websiteUrl": "https://matlogica.com/products/aadc-tracer",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "aadc-mcp",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

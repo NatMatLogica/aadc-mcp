@@ -1,0 +1,25 @@
+MatLogica aadc-mcp licence
+
+Copyright (c) 2026 MatLogica Ltd, London. All rights reserved.
+
+This source code is made visible so that it can be read, reviewed and run together with the MatLogica AADC
+packages (aadc, aadc-quantlib, aadc-quantlib-tracing).
+
+You may:
+
+- install and run this software, unmodified or with your own local modifications, together with the MatLogica AADC
+  packages, under the licence that applies to those packages;
+- read, copy and quote the source for review, evaluation and support.
+
+You may not:
+
+- redistribute this software, modified or unmodified, outside your organisation, or publish modified copies;
+- remove this notice or the MatLogica attribution;
+- use the MatLogica name or marks to endorse work derived from it.
+
+The AADC engine installs in Community Edition for non-commercial and academic use; commercial use needs a licence
+from MatLogica (info@matlogica.com).
+
+This software is provided "as is", without warranty of any kind, express or implied, including the warranties of
+merchantability, fitness for a particular purpose and non-infringement. In no event shall MatLogica be liable for any
+claim, damages or other liability arising from, out of or in connection with the software or its use.

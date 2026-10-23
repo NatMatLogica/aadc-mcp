@@ -1,0 +1,8 @@
+# Patterns that may never appear in shipped files: private network addresses, home directories, local ports.
+# One regular expression per line; case-insensitive. A private list of the same shape may sit beside this file.
+192\.168\.
+10\.\d{1,3}\.\d{1,3}\.\d{1,3}
+172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.
+/home/
+/Users/
+localhost:\d+

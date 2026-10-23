@@ -1,0 +1,14 @@
+# The source distribution is public. It carries the package, its guides and examples, the README, the licence, the
+# changelog and pyproject, nothing else: no tests, no docs folder, no tools. Root-level files not listed here are not
+# included by setuptools.
+include README.md
+include pyproject.toml
+include LICENSE
+include CHANGELOG.md
+recursive-include aadc_mcp *.py *.md
+prune tests
+prune docs
+prune dist
+prune build
+prune tools
+global-exclude __pycache__ *.py[cod] *.tape *.log

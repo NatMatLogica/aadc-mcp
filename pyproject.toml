@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aadc-mcp"
+version = "0.1.2"
+description = "MatLogica AADC and the AADC Tracer from your coding agent: a local MCP server that checks the environment, traces a QuantLib or Python script and questions the record"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary"}
+authors = [{name = "MatLogica", email = "info@matlogica.com"}]
+keywords = ["AADC", "automatic differentiation", "QuantLib", "MCP", "model validation", "source tracing"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = ["mcp>=2.3,<3", "aadc>=2.25.2,<3"]
+
+[project.urls]
+Homepage = "https://matlogica.com/products/aadc-tracer"
+Documentation = "https://matlogica.com/products/aadc-tracer"
+
+[project.optional-dependencies]
+# QuantLib 1.41 built with source tracing. Wheels for Linux x86-64 and macOS arm64 (from 1.41.4), CPython 3.10-3.14;
+# the marker keeps `pip install "aadc-mcp[quantlib]"` from failing elsewhere (it installs nothing there and says so at
+# check_environment).
+quantlib = ["aadc-quantlib-tracing>=1.41.4,<1.42; (platform_system == 'Linux' and platform_machine == 'x86_64') or (platform_system == 'Darwin' and platform_machine == 'arm64')"]
+# QuantLib 1.38 with exact AAD sensitivities, every platform.
+greeks = ["aadc-quantlib>=1.38.10"]
+
+[project.scripts]
+aadc-mcp = "aadc_mcp.server:main"
+
+[tool.setuptools.packages.find]
+include = ["aadc_mcp*"]
+
+[tool.setuptools.package-data]
+aadc_mcp = ["guides/*.md", "examples/*.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
